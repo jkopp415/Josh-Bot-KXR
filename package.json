@@ -1,0 +1,28 @@
+{
+  "name": "josh-bot-kxr",
+  "version": "1.0.0",
+  "description": "This bot is simply a reflection of myself",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "deploy": "node deploy-commands.js",
+    "deploy-start": "node deploy-commands.js && node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkopp415/Josh-Bot.git"
+  },
+  "author": "Josh K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkopp415/Josh-Bot/issues"
+  },
+  "homepage": "https://github.com/jkopp415/Josh-Bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "discord.js": "^14.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
