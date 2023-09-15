@@ -20,7 +20,8 @@ module.exports = {
         } else {
             interaction.reply({ content: 'Sending message...', ephemeral: true });
             const message = interaction.options.getString('message');
-            interaction.channel.send(message);
+            interaction.channel.send(message)
+                .catch(console.error);
         }
 
     }
