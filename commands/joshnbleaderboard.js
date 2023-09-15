@@ -23,7 +23,6 @@ module.exports = {
 
         // Get a list of all the members from the server and filter out bots
         let memberList = await interaction.guild.members.fetch();
-        memberList = memberList.filter((member) => !member.user.bot);
 
         // Begin the string displaying the leaderboard
         let responseString = 'The 10 users with the most nerdbobs:\n';
@@ -53,10 +52,11 @@ module.exports = {
                     break;
                 }
 
+
                 // Get the member's server nickname, getting their display name if the nickname is null
                 let nickname = '';
                 if ((nickname = tempUser.nickname) == null) {
-                    nickname = tempUser.user.displayName;
+                    nickname = tempUser.user.username;
                 }
 
                 // Add each entry in the leaderboard to the response message
